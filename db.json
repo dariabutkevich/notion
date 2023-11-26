@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "user1@gmail.com",
+      "password": "1234darDAR",
+      "createdAt": 1700313547023
+    },
+    {
+      "email": "g@mail.com",
+      "password": "1234darDARc",
+      "createdAt": "2023-11-26T15:39:20.821Z",
+      "id": 2
+    },
+    {
+      "email": "w@mail.com",
+      "password": "1234darDAR",
+      "createdAt": "2023-11-26T16:15:38.993Z",
+      "id": 3
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "authorId": 1,
+      "title": "Первая заметка",
+      "text": "Тело первой заметки",
+      "createdAt": 1700313547024
+    },
+    {
+      "title": "zxc",
+      "text": "",
+      "createdAt": 1701011637325,
+      "authorId": 1,
+      "id": 3
+    },
+    {
+      "title": "xdgdf",
+      "text": "dfg",
+      "createdAt": 1701015357225,
+      "authorId": 3,
+      "id": 4
+    },
+    {
+      "title": "sd",
+      "text": "",
+      "createdAt": 1701019996113,
+      "authorId": 3,
+      "id": 5
+    },
+    {
+      "title": "sf",
+      "text": "",
+      "createdAt": 1701020166931,
+      "authorId": 3,
+      "id": 6
+    },
+    {
+      "title": "sd",
+      "text": "",
+      "createdAt": 1701020205235,
+      "authorId": 3,
+      "id": 7
+    }
+  ]
+}
