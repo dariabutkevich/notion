@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { UserContext } from "../components/UserContextProvider";
 import LayoutHeader from "./LayoutHeader";
+import { z } from "zod";
 
 function NewNote() {
   const [title, setTitle] = useState("");
@@ -14,11 +15,18 @@ function NewNote() {
     localStorage.setItem("newNote", JSON.stringify({ title, text }));
   }, [title, text]);
 
+  const Note = z.object({
+    title: z.string().min(1),
+  });
+
   function handleSaveNote() {
-    if (title.trim() === "") {
+    const validation = Note.safeParse({ title });
+
+    if (!validation.success) {
       setError("The Title field cannot be empty.");
       return;
     }
+
     const newNote = {
       title: title,
       text: text,
@@ -28,7 +36,7 @@ function NewNote() {
 
     saveNoteData(newNote)
       .then(() => {
-        navigate("/not");
+        navigate("/notes");
       })
       .catch((error) => {
         console.log("Error", error);
@@ -48,7 +56,6 @@ function NewNote() {
         throw new Error("Error");
       }
       const responseData = await response.json();
-      console.log(responseData);
     } catch (error) {
       console.error("Error", error);
       throw error;

@@ -12,7 +12,7 @@ export const User = z.object({
       {
         message:
           "The password must contain at least one uppercase letter, one lowercase letter and one digit.",
-      }
+      },
     ),
 });
 
@@ -33,7 +33,6 @@ export const saveUserData = async (userData) => {
       throw new Error("Error");
     }
     const responseData = await response.json();
-    console.log(responseData);
   } catch (error) {
     console.error("Error", error);
     throw error;

@@ -30,7 +30,6 @@ function SignUp() {
       };
 
       setUserId(generatedUserId);
-      console.log(userData);
       setErrors(null);
       saveUserData(userData)
         .then(() => {

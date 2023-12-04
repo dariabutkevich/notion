@@ -17,7 +17,6 @@ function Login() {
         email,
         password,
       });
-      console.log(user);
       setError(null);
     } catch (err) {
       if (err instanceof z.ZodError) {

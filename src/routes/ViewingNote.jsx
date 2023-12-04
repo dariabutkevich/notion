@@ -64,7 +64,9 @@ function ViewingNote() {
             🗑
           </div>
         </div>
-        <p className="flex justify-center  items-center gap-6 ">{note.text}</p>
+        <pre className="flex justify-centerbreak-all items-center gap-6 bg-white text-black">
+          {note.text}
+        </pre>
         <p className="flex justify-center  items-center gap-6 ">
           {new Date(note.createdAt).toLocaleDateString()}
         </p>
